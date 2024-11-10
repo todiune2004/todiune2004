@@ -68,9 +68,13 @@ int main(){
 			}
 			cout<< endl;
 		}
-    	chrono::duration<double> duration = end - start;
-    	cout << "Time to find solutions: " << duration.count() << " seconds" << endl;
-		// if(i<3) system("cls");// cấy ni là để xóa log sau mỗi input
+		res.clear();
+		memset(a, 0, 1005);
+		memset(x, 0, 1005);
+		final = 1;
+		chrono::duration<double> duration = end - start;
+    		cout << "Time to find solutions: " << duration.count() << " seconds" << endl;
+		if(i<3) system("cls");
 		
 	}
 }
