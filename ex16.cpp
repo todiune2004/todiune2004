@@ -49,7 +49,7 @@ int main(){
 		}
 		sort(a+1,a+n+1);
 		inp >> k >> p;
-		if( n <= 0 || k <= 0 && p == 0){
+		if( n <= 0 || k < 0 || k==0 && p == 0){
 			cout<<"The input error! Re-enter n, a, k, p: ";
 			return 0;
 		}
