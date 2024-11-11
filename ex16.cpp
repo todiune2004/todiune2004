@@ -40,7 +40,7 @@ void result(){
 int main(){
 	for(int i = 1 ; i <= 3 ; i++ ){
 		string filename = "input" + to_string(i) + ".txt";
-		cout<<filename<<endl;
+		// cout<<filename<<endl;
 		fstream inp;
 		inp.open( filename, ios::in);
 		inp >> n;
@@ -49,11 +49,11 @@ int main(){
 		}
 		sort(a+1,a+n+1);
 		inp >> k >> p;
-		if( n <= 0 || k<=0 && p == 0){
-			cout<<"The input error! Re-enter n, a, k, p: ";
-			return 0;
-		}
 		inp.close();
+		if( n <= 0 || k <= 0 && p == 0){
+			cout<<"The input error! Re-enter n, a, k, p: ";
+		}
+		else{
 		auto start = chrono::high_resolution_clock::now();
 		init();
 		while (final){
@@ -72,9 +72,10 @@ int main(){
 		memset(a, 0, 1005);
 		memset(x, 0, 1005);
 		final = 1;
-		chrono::duration<double> duration = end - start;
-    		cout << "Time to find solution: " << duration.count() << " seconds" << endl;
+    	chrono::duration<double> duration = end - start;
+    	cout << "Time to find solution: " << duration.count() << " seconds" << endl;
 		if(i<3) system("cls");
+		}
 		
 	}
 }
