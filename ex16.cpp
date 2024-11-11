@@ -73,7 +73,7 @@ int main(){
 		memset(x, 0, 1005);
 		final = 1;
 		chrono::duration<double> duration = end - start;
-    		cout << "Time to find solutions: " << duration.count() << " seconds" << endl;
+    		cout << "Time to find solution: " << duration.count() << " seconds" << endl;
 		if(i<3) system("cls");
 		
 	}
